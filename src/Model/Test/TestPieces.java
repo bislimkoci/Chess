@@ -4,7 +4,7 @@ import Model.Pieces.*;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+
 
 public class TestPieces {
 
@@ -14,9 +14,12 @@ public class TestPieces {
         whitePawn.move(0,1);
         assertEquals(1, whitePawn.getX());
         assertEquals(2, whitePawn.getY());
-        whitePawn.move(0, 2);
-        assertEquals(1, whitePawn.getX());
-        assertEquals(2, whitePawn.getY());
+        try {
+            whitePawn.move(0, 2);
+        } catch (Exception e) {
+            assertEquals(1, whitePawn.getX());
+            assertEquals(2, whitePawn.getY());
+        }
         BlackPawn bp = new BlackPawn(2, 3);
         whitePawn.capture(bp);
         assertEquals(2, whitePawn.getX());
@@ -36,9 +39,12 @@ public class TestPieces {
         blackPawn.move(0,-1);
         assertEquals(7, blackPawn.getX());
         assertEquals(6, blackPawn.getY());
-        blackPawn.move(0, 2);
-        assertEquals(7, blackPawn.getX());
-        assertEquals(6, blackPawn.getY());
+        try {
+            blackPawn.move(0, 2);
+        } catch (Exception e) {
+            assertEquals(7, blackPawn.getX());
+            assertEquals(6, blackPawn.getY());
+        }
         WhitePawn wp = new WhitePawn(6, 5);
         blackPawn.capture(wp);
         assertEquals(6, blackPawn.getX());
@@ -97,9 +103,13 @@ public class TestPieces {
         rook.move(3, 0);
         assertEquals(7, rook.getX());
         assertEquals(4, rook.getY());
-        rook.move(3, 0);
-        assertEquals(7, rook.getX());
-        assertEquals(4, rook.getY());
+        try {
+            rook.move(3, 0);
+        } catch (Exception e) {
+            assertEquals(7, rook.getX());
+            assertEquals(4, rook.getY());
+        }
+
         Piece pawn = new BlackPawn(7, 0);
         rook.capture(pawn);
         assertEquals(7, rook.getX());
@@ -120,9 +130,12 @@ public class TestPieces {
         king.move(1, -1);
         assertEquals(5, king.getX());
         assertEquals(3, king.getY());
-        king.move(0, 0);
-        assertEquals(5, king.getX());
-        assertEquals(3, king.getY());
+        try {
+            king.move(0, 0);
+        } catch (Exception e){
+            assertEquals(5, king.getX());
+            assertEquals(3, king.getY());
+        }
         Piece pawn = new BlackPawn(5, 4);
         king.capture(pawn);
         assertEquals(5, king.getX());

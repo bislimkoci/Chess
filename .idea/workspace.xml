@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f381105f-3a3f-40b3-b4b9-344f4ef6ac85" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Model/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Pieces/AbstractPiece.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Pieces/Bishop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Pieces/BlackPawn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Pieces/King.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Pieces/Knight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Pieces/Pawn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Pieces/Piece.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Pieces/PieceConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Pieces/Queen.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Pieces/Rook.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Pieces/WhitePawn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Test/TestPieces.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chess.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Chess.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Pieces/AbstractPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Pieces/AbstractPiece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Test/TestPieces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Test/TestPieces.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,22 +62,7 @@
       <recent name="Model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestPieces">
-    <configuration name="TestPieces" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Chess" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Model.Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Model.Test" />
-      <option name="MAIN_CLASS_NAME" value="Model.Test.TestPieces" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.TestPieces.kingTest">
     <configuration name="TestPieces.bishopTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Chess" />
       <extension name="coverage">
@@ -102,6 +74,22 @@
       <option name="PACKAGE_NAME" value="Model.Test" />
       <option name="MAIN_CLASS_NAME" value="Model.Test.TestPieces" />
       <option name="METHOD_NAME" value="bishopTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestPieces.blackPawnTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Chess" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Model.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Model.Test" />
+      <option name="MAIN_CLASS_NAME" value="Model.Test.TestPieces" />
+      <option name="METHOD_NAME" value="blackPawnTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -157,11 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestPieces" />
         <item itemvalue="JUnit.TestPieces.kingTest" />
         <item itemvalue="JUnit.TestPieces.rookTest" />
         <item itemvalue="JUnit.TestPieces.bishopTest" />
         <item itemvalue="JUnit.TestPieces.knightTest" />
+        <item itemvalue="JUnit.TestPieces.blackPawnTest" />
       </list>
     </recent_temporary>
   </component>
@@ -180,7 +168,7 @@
       <workItem from="1698648245937" duration="902000" />
       <workItem from="1698656706991" duration="6452000" />
       <workItem from="1698855627040" duration="666000" />
-      <workItem from="1699210062600" duration="1807000" />
+      <workItem from="1699210062600" duration="2181000" />
     </task>
     <task id="LOCAL-00001" summary="Fixing project">
       <option name="closed" value="true" />
@@ -198,7 +186,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698155020772</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added the different pieces with tests">
+      <option name="closed" value="true" />
+      <created>1699212083757</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699212083757</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,6 +202,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixing project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing project" />
+    <MESSAGE value="Added the different pieces with tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the different pieces with tests" />
   </component>
 </project>

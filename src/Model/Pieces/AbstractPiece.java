@@ -23,6 +23,8 @@ abstract class AbstractPiece implements Piece {
         if (availableMove(dx, dy) && isInside(dx, dy)) {
             this.x += dx;
             this.y += dy;
+        } else {
+            throw new IllegalArgumentException("Piece can't move that path or is out of bounds");
         }
     }
 
