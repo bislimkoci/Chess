@@ -14,18 +14,20 @@ abstract class AbstractPiece implements Piece {
 
     abstract boolean availableMove(int dx, int dy);
 
-    public boolean isInside(int dx, int dy) {
+    private boolean isInside(int dx, int dy) {
         return x + dx < 8 && y + dy < 8 && x > -1 && y > -1;
     }
 
     @Override
     public void move(int dx, int dy) {
-        if (availableMove(dx, dy) && isInside(dx, dy)) {
-            this.x += dx;
-            this.y += dy;
-        } else {
-            throw new IllegalArgumentException("Piece can't move that path or is out of bounds");
+        if (availableMove(dx, dy)) {
+            throw new IllegalArgumentException("Piece can't take that path");
         }
+        if (isInside(dx, dy)) {
+            throw new IllegalArgumentException("Piece will be out of bounce");
+        }
+        this.x += dx;
+        this.y += dy;
     }
 
     abstract boolean availableCapture(int dx, int dy);
@@ -41,7 +43,6 @@ abstract class AbstractPiece implements Piece {
             throw new IllegalArgumentException("Piece can't Capture");
         }
     }
-
 
     public int getX() {
         return x;
