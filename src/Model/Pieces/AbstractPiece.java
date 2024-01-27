@@ -20,10 +20,10 @@ abstract class AbstractPiece implements Piece {
 
     @Override
     public void move(int dx, int dy) {
-        if (availableMove(dx, dy)) {
+        if (!availableMove(dx, dy)) {
             throw new IllegalArgumentException("Piece can't take that path");
         }
-        if (isInside(dx, dy)) {
+        if (!isInside(dx, dy)) {
             throw new IllegalArgumentException("Piece will be out of bounce");
         }
         this.x += dx;
