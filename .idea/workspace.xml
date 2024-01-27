@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f381105f-3a3f-40b3-b4b9-344f4ef6ac85" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Model/Pieces/AbstractPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Pieces/AbstractPiece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Test/TestPieces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Test/TestPieces.java" afterDir="false" />
+    <list default="true" id="f381105f-3a3f-40b3-b4b9-344f4ef6ac85" name="Changes" comment="Refactoring the class.">
+      <change afterPath="$PROJECT_DIR$/src/Model/Board.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/CoordinateConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/GameBoard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/GamePlayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/TwoPlayerChessGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +30,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;bislimkoci&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="55f349e6-39e2-44ed-bb23-9c6e3cb36931" />
+        <option name="url" value="https://github.com/bislimkoci/Chess.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -36,33 +56,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.TestPieces.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/bisli/Java/pvg-group-02&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="Model" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestPieces.kingTest">
+  <component name="RunManager" selected="JUnit.TestPieces">
+    <configuration name="TestPieces" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Chess" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Model.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Model.Test" />
+      <option name="MAIN_CLASS_NAME" value="Model.Test.TestPieces" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestPieces.bishopTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Chess" />
       <extension name="coverage">
@@ -74,22 +112,6 @@
       <option name="PACKAGE_NAME" value="Model.Test" />
       <option name="MAIN_CLASS_NAME" value="Model.Test.TestPieces" />
       <option name="METHOD_NAME" value="bishopTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestPieces.blackPawnTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Chess" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Model.Test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Model.Test" />
-      <option name="MAIN_CLASS_NAME" value="Model.Test.TestPieces" />
-      <option name="METHOD_NAME" value="blackPawnTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -145,13 +167,20 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestPieces" />
         <item itemvalue="JUnit.TestPieces.kingTest" />
         <item itemvalue="JUnit.TestPieces.rookTest" />
         <item itemvalue="JUnit.TestPieces.bishopTest" />
         <item itemvalue="JUnit.TestPieces.knightTest" />
-        <item itemvalue="JUnit.TestPieces.blackPawnTest" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-20.0.2-azul-20.0.2-f644763e9732-d86f2a68" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -168,7 +197,15 @@
       <workItem from="1698648245937" duration="902000" />
       <workItem from="1698656706991" duration="6452000" />
       <workItem from="1698855627040" duration="666000" />
-      <workItem from="1699210062600" duration="2181000" />
+      <workItem from="1699210062600" duration="2716000" />
+      <workItem from="1699212831885" duration="50000" />
+      <workItem from="1699432290816" duration="1764000" />
+      <workItem from="1699562246741" duration="2683000" />
+      <workItem from="1700555913896" duration="20000" />
+      <workItem from="1701878479288" duration="201000" />
+      <workItem from="1706361559098" duration="871000" />
+      <workItem from="1706362447683" duration="1657000" />
+      <workItem from="1706381056609" duration="710000" />
     </task>
     <task id="LOCAL-00001" summary="Fixing project">
       <option name="closed" value="true" />
@@ -194,7 +231,31 @@
       <option name="project" value="LOCAL" />
       <updated>1699212083757</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="move now throws IllegalArgument if piece makes an illegal path or is out of bounds.">
+      <option name="closed" value="true" />
+      <created>1699212627728</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699212627728</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Refactoring the class.">
+      <option name="closed" value="true" />
+      <created>1706362260341</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1706362260341</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Refactoring the class.">
+      <option name="closed" value="true" />
+      <created>1706362362924</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1706362362924</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +264,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixing project" />
     <MESSAGE value="Added the different pieces with tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the different pieces with tests" />
+    <MESSAGE value="move now throws IllegalArgument if piece makes an illegal path or is out of bounds." />
+    <MESSAGE value="Refactoring the class." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring the class." />
   </component>
 </project>

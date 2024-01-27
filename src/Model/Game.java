@@ -1,8 +1,8 @@
 package Model;
 
-public class Game {
+public interface Game {
+    void run();
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
-    }
+    void gameLoop();
+
 }
